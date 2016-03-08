@@ -40,6 +40,7 @@ for (var i = 0; i < 10; i++) {
 
 module.exports.add('dane','hello');
 
-console.log(module.exports.find('text'));
+console.log(module.exports.find({'name' : 'Dave Stackson'}));
+
 
 //console.log(data);
