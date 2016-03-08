@@ -21,6 +21,9 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 app.use('/', routes);
 
+
+
+
 app.use(function(request, response, next) {
 	console.log(request.method + request.url);
 	next();
