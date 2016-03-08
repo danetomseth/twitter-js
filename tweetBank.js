@@ -17,6 +17,10 @@ function find (properties) {
   return _.cloneDeep(_.filter(data, properties));
 }
 
+function followers(){
+  return data.length;
+}
+
 module.exports = { add: add, list: list, find: find };
 
 
