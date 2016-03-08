@@ -22,6 +22,10 @@
         <div class='next-tweet'></div>
         
       {% endfor %}
+
+      {% for tweet in tweets %}
+        <li><a href="/users/{{tweet.name}}">{{tweet.name}}</a> - {{tweet.text}}</li>
+      {% endfor %}
       
     </div>
   </div>

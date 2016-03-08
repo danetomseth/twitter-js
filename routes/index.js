@@ -20,7 +20,16 @@ router.use(express.static('public'));
 
 router.get('/', function (req, res) {
   var tweets = tweetBank.list();
+  console.log(tweets);
   res.render( 'index', { title: 'Twitter.js', tweets: tweets } );
+});
+
+router.get('/users/:name', function(req, res) {
+  var name = req.params.name;
+  var list = tweetBank.find( {name: name} );
+  console.log({name: name});
+  console.log({list: list});
+  res.render( 'index', { title: 'Twitter.js - Posts by '+name, list: list } );
 });
 
 module.exports = router;
